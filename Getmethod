@@ -1,0 +1,49 @@
+package com.rupesh;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class GetMethod {
+	
+	
+	/*Get() -open url
+	 * Navigate.to()-open url
+	 * getTitle method is used to get the title of web page  as an O/P. 
+	 * Return type of getTitle is  String. */
+	public static void main(String[] args) {
+		//set Property of system
+		WebDriverManager.chromedriver().setup();
+		//object for ChromeDriver
+		WebDriver driver=new ChromeDriver();
+		//Retrive URL
+		driver.get("https://www.amazon.in/");
+		//driver.navigate().to("https://www.amazon.in/");
+		//getTitle() of webpage
+		String title=driver.getTitle();
+		System.out.println("Webpage title is:"+title);
+		if(title.startsWith("o")) {
+			System.out.println("test is pass");
+		}
+		else
+			System.out.println("test is fail");
+		driver.quit();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	}	
+}
